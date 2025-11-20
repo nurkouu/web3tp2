@@ -5,7 +5,7 @@
         "a a b c"
         "d d d d"
         "e f g h";
-    grid-template-columns: 800px 300px 600px auto;
+    grid-template-columns: 700px 400px 600px auto;
     grid-template-rows: 1fr 1fr 1fr;
 }
 
@@ -34,7 +34,7 @@
 
 .Titre {
     grid-area: d;
-    background-color: plum;
+    background-color: midnightblue;
 }
 
 .imageN {
