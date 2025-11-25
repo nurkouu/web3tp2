@@ -22,7 +22,7 @@ let graphique = new Chart(document.querySelector("#radar"), {
       {
         label: "Seraph II",
         data: [12, 31, 7, 26, 19, 4],
-        backgroundColor: "rgba(154, 207, 169, 0.5)",
+        backgroundColor: "rgba(39, 82, 56, 0.8)",
         pointBackgroundColor: "rgb(83, 255, 138)",
         borderWidth: 0
       }
@@ -38,7 +38,11 @@ let graphique = new Chart(document.querySelector("#radar"), {
       title: {
         display: true,
         text: "Emotional Profile",
-        color: "rgba(243, 243, 232, 0.7)"
+         color: "white",
+           font: {             // <-- added font size here
+          size: 15,         // increase this number to make title bigger
+          weight: 'bold'    // optional
+        }
       },
       legend: {
         labels: {
@@ -85,15 +89,15 @@ setInterval(() => {
 let graph = new Chart(document.querySelector("#anneau"), {
   type: "doughnut",
   data: {
-    labels: ["Action", "Horreur", "Comédie", "Science-fiction"],
+    labels: ["Divine Manipulation", "Halo Barrier", "Celestial Blessing", "Healing touch"],
     datasets: [
       {
         data: [1, 2, 3, 4],
         backgroundColor: [
-          "rgba(239, 85, 85, 1)",
-          "rgba(85, 239, 85, 1)",
-          "rgba(85, 85, 239, 1)",
-          "rgba(222, 222, 222, 1)"
+          "rgba(251, 248, 95, 0.6)",
+          "rgba(125, 121, 32, 0.5)",
+          "rgba(39, 82, 56, 0.8)",
+          "rgba(83, 255, 138 , 0.6)",
         ],
         hoverOffset: 20,
         borderWidth: 0,
@@ -107,25 +111,30 @@ let graph = new Chart(document.querySelector("#anneau"), {
     responsive: true,
     maintainAspectRatio: false,
     cutout: "70%",
-    circumference: 360,
+    circumference: 180,
     rotation: -90,
     plugins: {
+
       title: {
         display: true,
-        text: "Intérêt par genre de film",
-        padding: { top: 8, bottom: 12 }
+    
+        padding: { top: 8, bottom: 12 },
+        color: "white",
+        font: {     
+          size: 15,        
+          weight: 'bold'   
+        }
+      },
+      
+      legend: {
+         position: "right",  
+        align: "start", 
+        labels: {
+          color: "rgba(243, 243, 232, 0.7)"
+        }
       }
     }
   }
 });
 
 
-setInterval(() => {
-  for (let ds of graph.data.datasets) {
-    for (let i = 0; i < ds.data.length; i++) {
-      ds.data[i] = Math.round(Math.random() * 2
-      );
-    }
-  }
-  graph.update();
-}, 100);

@@ -35,8 +35,8 @@
 
 .S {
     grid-area: b;
-    background-color: rebeccapurple;
-
+ 
+    border: 3px solid #777;
     display: grid;
     padding: 15px;
 }
@@ -92,6 +92,15 @@
 
 .GA {
     width: 30vw;
-    height: 30vh;
+    height: 20vh;
+}
 
+.anneau-title {
+  margin: 0;
+  font-size: 24px;
+}
+
+.S1, .S2, .S3 {
+    background-color: aqua;
+    border: 3px solid #777;
 }
