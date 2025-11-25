@@ -54,7 +54,7 @@ let graphique = new Chart(document.querySelector("#radar"), {
                 },
                 grid: {
                     circular: false,
-                    color: "rgba(222,222,222,0.1)"
+                    color: "rgba(255, 3, 3, 0.1)"
                 },
                 ticks: { stepSize: 10, showLabelBackdrop: false }
             }
@@ -98,7 +98,7 @@ let graph = new Chart(document.querySelector("#anneau"), {
     responsive: true,
     maintainAspectRatio: false,
     cutout: "70%",
-    circumference: 180,
+    circumference: 360,
     rotation: -90,
     plugins: {
       title: {

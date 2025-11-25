@@ -14,15 +14,18 @@
   <!-- bootstrap-icons -->
 
   <script type="importmap">
-      {
+      {         
         "imports": {
+           
           "animejs": "./node_modules/animejs/dist/bundles/anime.esm.min.js",
           "chart.js/auto": "./node_modules/chart.js/auto/auto.js",
+          "maplibre-gl": "https://esm.sh/maplibre-gl@5.13.0",
           "@kurkle/color": "./node_modules/@kurkle/color/dist/color.esm.js"
         }
       }
     </script>
-
+  <script type="module" src="./src/js/maplibre.js"></script>
+  <!-- maplibre.js -->
   <script type="module" src="./src/js/animejs.js"></script>
   <!-- animejs -->
   <script type="module" src="./src/js/chartjs.js"></script>
@@ -44,8 +47,8 @@
             <canvas id="anneau"></canvas>
         </div>
         <div class="PL placeholder col-6 mb-2">Placeholder : Graphique Progessive Line</div>
-        <div class="AC placeholder  mt-2">Placeholder : Animation / Carte
-
+        <div class="AC  mt-2">
+              <div id="carte"></div>
         </div>
       </div>
     </div>

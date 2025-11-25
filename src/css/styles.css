@@ -90,8 +90,15 @@
     height: 35vh;
 }
 
-.GA {
-     width: 50vw;
-    height: 30vh;
+#anneau {
+     width: 30vw;
+    height: 20vh;
 
 }
+
+.AC {
+    text-align: center;
+    border-radius: 10px;
+    height: 15vh;
+}
+
