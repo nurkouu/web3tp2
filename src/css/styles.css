@@ -48,6 +48,7 @@
     display: grid;
 }
 
+
 .Titre {
     grid-area: d;
     background-color: midnightblue;
@@ -84,4 +85,3 @@
 
     display: grid;
 }
-
