@@ -1,6 +1,6 @@
-import Chart from "https://esm.sh/chart.js/auto";
+import Chart from "chart.js/auto";
 
-let graphique = new Chart(document.querySelector("canvas"), {
+let graphique = new Chart(document.querySelector("#radar"), {
     type: "radar",
     data: {
         labels: [
@@ -62,8 +62,7 @@ let graphique = new Chart(document.querySelector("canvas"), {
     }
 });
 
-// Décommenter pour animer
-//
+
 setInterval(() => {
     for (let ds of graphique.data.datasets) {
         for (let i = 0; i < ds.data.length; i++) {
@@ -72,3 +71,51 @@ setInterval(() => {
     }
     graphique.update();
 }, 1000);
+
+
+let graph = new Chart(document.querySelector("#anneau"), {
+  type: "doughnut",
+  data: {
+    labels: ["Action", "Horreur", "Comédie", "Science-fiction"],
+    datasets: [
+      {
+        data: [1, 2, 3, 4],
+        backgroundColor: [
+          "rgba(239, 85, 85, 1)",
+          "rgba(85, 239, 85, 1)",
+          "rgba(85, 85, 239, 1)",
+          "rgba(222, 222, 222, 1)"
+        ],
+        hoverOffset: 20,
+        borderWidth: 0,
+        borderRadius: 1,
+        spacing: 1,
+       
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    cutout: "70%",
+    circumference: 180,
+    rotation: -90,
+    plugins: {
+      title: {
+        display: true,
+        text: "Intérêt par genre de film",
+        padding: { top: 8, bottom: 12 }
+      }
+    }
+  }
+});
+
+
+ setInterval(() => {
+   for (let ds of graphique.data.datasets) {
+     for (let i = 0; i < ds.data.length; i++) {
+       ds.data[i] = Math.round(Math.random() * 20);4
+            }
+   }
+   graphique.update();
+ }, 1000);
