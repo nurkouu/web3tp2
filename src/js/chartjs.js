@@ -4,40 +4,26 @@ let graphique = new Chart(document.querySelector("#radar"), {
   type: "radar",
   data: {
     labels: [
-      "Classic Rock",
-      "Pop Music",
-      "Country/Western",
-      "Hip-Hop/Rap",
-      "Electronic Dance/EDM",
-      "Chiptune"
+      "Courage",
+      "Joy",
+      "Anger",
+      "Fear",
+      "Sadness",
+      "Love"
     ],
     datasets: [
       {
-        label: "Courage",
+        label: "Seraph I",
         data: [20, 11, 18, 32, 40, 1],
-        backgroundColor: "rgb(154, 207, 169)",
-        pointBackgroundColor: "rgb(83, 255, 138)",
+        backgroundColor: "rgba(125, 121, 32, 0.5)",
+        pointBackgroundColor: "rgb(251, 248, 95)",
         borderWidth: 0
       },
       {
-        label: "Joie",
+        label: "Seraph II",
         data: [12, 31, 7, 26, 19, 4],
-        backgroundColor: "rgba(85, 239, 85, 0.2)",
-        pointBackgroundColor: "rgba(85, 239, 85, 1)",
-        borderWidth: 0
-      },
-      {
-        label: "Culpabilité",
-        data: [8, 25, 14, 32, 6, 21],
-        backgroundColor: "rgba(85, 85, 239, 0.2)",
-        pointBackgroundColor: "rgba(85, 85, 239, 1)",
-        borderWidth: 0
-      },
-      {
-        label: "Peur",
-        data: [10, 5, 43, 28, 17, 8],
-        backgroundColor: "rgba(85, 85, 239, 0.2)",
-        pointBackgroundColor: "rgba(85, 85, 239, 1)",
+        backgroundColor: "rgba(154, 207, 169, 0.5)",
+        pointBackgroundColor: "rgb(83, 255, 138)",
         borderWidth: 0
       }
     ]
@@ -51,19 +37,32 @@ let graphique = new Chart(document.querySelector("#radar"), {
       },
       title: {
         display: true,
-        text: "Genres écoutés par tranche d’âge"
+        text: "Emotional Profile",
+        color: "rgba(243, 243, 232, 0.7)"
+      },
+      legend: {
+        labels: {
+          color: "rgba(243, 243, 232, 0.7)"
+        }
       }
     },
     scales: {
       r: {
         angleLines: {
-          color: "rgba(222,222,222,0.1)"
+          color: "rgba(243, 243, 232, 0.7)"
         },
         grid: {
           circular: false,
-          color: "rgba(222,222,222,0.1)"
+          color: "rgba(243, 243, 232, 0.7)"
         },
-        ticks: { stepSize: 10, showLabelBackdrop: false }
+        ticks: {
+          stepSize: 10,
+          showLabelBackdrop: false,
+          color: "white"
+        },
+        pointLabels: {
+          color: "rgba(243, 243, 232, 0.7)"
+        }
       }
     }
   }
@@ -76,8 +75,11 @@ setInterval(() => {
       ds.data[i] = Math.round(Math.random() * 40 + 10);
     }
   }
-  graphique.update();
-}, 1000);
+  graphique.update({
+    duration: 800,
+    easing: "easeInOutSine"
+  });
+}, 700);
 
 
 let graph = new Chart(document.querySelector("#anneau"), {
@@ -122,7 +124,7 @@ setInterval(() => {
   for (let ds of graph.data.datasets) {
     for (let i = 0; i < ds.data.length; i++) {
       ds.data[i] = Math.round(Math.random() * 2
-    );
+      );
     }
   }
   graph.update();
