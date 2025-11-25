@@ -81,7 +81,11 @@
 
 .graphiqueR {
     grid-area: h;
-    background-color: khaki;
-
     display: grid;
+    border: 3px solid #777;
+}
+
+.GR {
+    width: 50vw;
+    height: 35vh;
 }
