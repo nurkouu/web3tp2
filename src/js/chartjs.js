@@ -105,7 +105,7 @@ let graph = new Chart(document.querySelector("#anneau"), {
     responsive: true,
     maintainAspectRatio: false,
     cutout: "70%",
-    circumference: 180,
+    circumference: 360,
     rotation: -90,
     plugins: {
       title: {
