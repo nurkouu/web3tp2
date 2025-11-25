@@ -119,10 +119,11 @@ let graph = new Chart(document.querySelector("#anneau"), {
 
 
 setInterval(() => {
-  for (let ds of graphique.data.datasets) {
+  for (let ds of graph.data.datasets) {
     for (let i = 0; i < ds.data.length; i++) {
-      ds.data[i] = Math.round(Math.random() * 20); 4
+      ds.data[i] = Math.round(Math.random() * 2
+    );
     }
   }
-  graphique.update();
-}, 1000);
+  graph.update();
+}, 100);
