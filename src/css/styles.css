@@ -21,8 +21,6 @@
 
 .troisCarres {
     grid-area: a;
-    background-color: aqua;
-
     display: grid;
     grid-template-columns: 4fr auto;
     grid-template-rows: 5fr auto;
@@ -86,3 +84,4 @@
 
     display: grid;
 }
+
