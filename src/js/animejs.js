@@ -1,4 +1,4 @@
-import { animate, utils } from 'animejs';
+import { animate, utils, createAnimatable, createTimeline, stagger, splitText } from 'animejs';
 
 animate(".dot", {
   height: [10, 410, 10],
@@ -23,9 +23,7 @@ animate(".dottt", {
   easing: 'linear',
 });
 
-
-
-import { createTimeline, stagger, splitText } from 'animejs';
+// animation du texte clone
 
 const { chars } = splitText('p', {
   chars: {
@@ -42,3 +40,47 @@ createTimeline()
     duration: 500,
     ease: 'inOut(2)',
   }, stagger(50, { from: 'top' }));
+
+/*
+//animation de l'étoile revert
+animate('g', {
+  rotate: "360deg",
+  duration: 1000,
+  loop: true,
+  easing: 'linear',
+  alternate: true,
+  scale: 3
+});
+*/
+
+
+
+const star = document.querySelector('.star g');
+
+
+const starAnim = createAnimatable(star, {
+  x: 0,
+  y: 0,
+  easing: 'out(4)',
+});
+
+
+const onMouseMove = e => {
+  const mouseX = e.clientX;
+  const mouseY = e.clientY;
+
+
+  starAnim.x(mouseX);
+  starAnim.y(mouseY);
+};
+
+
+const revertButton = document.querySelector('.future-btn');
+const revertAnim = () => {
+  window.removeEventListener('mousemove', onMouseMove);
+  starAnim.revert();
+};
+
+
+window.addEventListener('mousemove', onMouseMove);
+revertButton.addEventListener('click', revertAnim);

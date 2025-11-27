@@ -91,11 +91,10 @@
     </div>
 
     <div class="quatreCarres container">
-      <div class="row bg-warning d-flex justify-content-center">
+      <div class="row  d-flex justify-content-center">
 
-        <div class="ES col-4 me-4 mb-4">
-          <svg viewBox="0 0 100 100">
-
+        <div class="ES col-4 me-4"> <!-- Effet Sonar -->
+          <svg viewBox="0 0 100 100" class="effetS">
             <circle cx="50" cy="50" r="5" fill="rgb(83, 255, 138)">
               <animate attributeName="r" values="5;45" dur="2s" repeatCount="indefinite" keySplines="0.42 0 0.58 1"
                 calcMode="spline" />
@@ -112,15 +111,30 @@
               <animate attributeName="opacity" values="0.15;0.05;0.15" keyTimes="0;0.5;1" dur="2s"
                 repeatCount="indefinite" />
             </path>
-
           </svg>
         </div>
 
-        <div class="R placeholder col-4 ms-4 mb-4">
-          Placeholder : Revert js
+        <div class="B col-4 ms-4 mb-3 "> <!-- Bouton revert -->
+          <button class="future-btn ">Deactivate</button>
         </div>
-        <div class="B placeholder col-4 me-4">Placeholder : Bouton</div>
-        <div class="ZD placeholder col-4 ms-4">Placeholder : Zdog?</div>
+
+        <div class="R col-4 me-4 mb-4"> <!-- Revert étoile -->
+          <svg viewBox="0 0 304 112" class="star">
+            <g stroke-width="5" stroke="rgb(39, 82, 56)" stroke-linejoin="round" fill="rgba(39, 82, 56, 0.5)"
+              fill-rule="evenodd">
+
+              <polygon id="path-1" points="152,4 170,38 204,56 170,74 152,108 134,74 100,56 134,38">
+              </polygon>
+
+              <polygon id="path-2" style="opacity: 0" points="152,4 170,38 204,56 170,74 152,108 134,74 100,56 134,38">
+              </polygon>
+
+            </g>
+          </svg>
+        </div>
+
+        <div class="ZD placeholder col-4 ms-4">Placeholder : Zdog?</div> <!-- ZDog -->
+
       </div>
     </div>
 
