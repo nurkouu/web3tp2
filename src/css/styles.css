@@ -35,7 +35,7 @@
 
 .S {
     grid-area: b;
- 
+
     border: 3px solid #777;
     display: grid;
     padding: 15px;
@@ -95,23 +95,39 @@
 }
 
 .anneau-title {
-  margin: 0;
-  font-size: 24px;
+    margin: 0;
+    font-size: 24px;
 }
 
-.S1, .S2, .S3 {
-  height: 200px;                
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;        
+.S1,
+.S2,
+.S3 {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
-.dot, .dott, .dottt {
-    transform: translateY(210px); 
-  width: 120px;
-  height: 20px;                  
-background-color:rgb(251, 248, 95);
-border: #ffd500 3px solid;
-border-radius: 5%;
+.dot,
+.dott,
+.dottt {
+    transform: translateY(210px);
+    width: 120px;
+    height: 20px;
+    background-color: rgb(251, 248, 95);
+    border: #ffd500 3px solid;
+    border-radius: 5%;
 }
 
+svg {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    right: 20%;
+    top: 20%;
+    border: 2px solid rgb(83, 255, 138);
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgb(83, 255, 138),
+        0 0 24px rgba(83, 255, 138, 0.6),
+        inset 0 0 10px rgba(83, 255, 138, 0.4);
+}
