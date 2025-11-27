@@ -39,9 +39,9 @@ let graphique = new Chart(document.querySelector("#radar"), {
         display: true,
         text: "Emotional Profile",
          color: "white",
-           font: {             // <-- added font size here
-          size: 15,         // increase this number to make title bigger
-          weight: 'bold'    // optional
+           font: {            
+          size: 15,        
+          weight: 'bold'    
         }
       },
       legend: {
@@ -138,3 +138,77 @@ let graph = new Chart(document.querySelector("#anneau"), {
 });
 
 
+
+const ctx = document.getElementById('multiAxisChart').getContext('2d');
+
+const multiAxisChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['T0', 'T1', 'T2', 'T3', 'T4', 'T5', 'T6'], 
+        datasets: [
+            {
+                label: 'Heart Rate (bpm)',
+                data: [80, 95, 110, 105, 120, 115, 100],
+                borderColor: 'rgb(255, 99, 132)',
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                yAxisID: 'y',
+                tension: 0.4 
+            },
+            {
+                label: 'Wing Energy (%)',
+                data: [100, 90, 75, 80, 65, 70, 85],
+                borderColor: 'rgb(54, 162, 235)',
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                yAxisID: 'y1',
+                tension: 0.4
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        interaction: {
+            mode: 'index',
+            intersect: false,
+        },
+        stacked: false,
+        plugins: {
+            title: {
+                display: true,
+                text: 'Seraphim Vitals Over Time'
+            }
+        },
+        scales: {
+            y: {
+                type: 'linear',
+                display: true,
+                position: 'left',
+                title: {
+                    display: true,
+                    text: 'Heart Rate (bpm)'
+                },
+                min: 50,
+                max: 150
+            },
+            y1: {
+                type: 'linear',
+                display: true,
+                position: 'right',
+                grid: {
+                    drawOnChartArea: false,
+                },
+                title: {
+                    display: true,
+                    text: 'Wing Energy (%)'
+                },
+                min: 0,
+                max: 100
+            },
+            x: {
+                title: {
+                    display: true,
+                    text: 'Time'
+                }
+            }
+        }
+    }
+});

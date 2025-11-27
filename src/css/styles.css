@@ -75,7 +75,6 @@
 .deuxRectangles {
     grid-area: g;
     background-color: magenta;
-
     display: grid;
 }
 
@@ -101,6 +100,18 @@
 }
 
 .S1, .S2, .S3 {
-    background-color: aqua;
-    border: 3px solid #777;
+  height: 200px;                
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;        
 }
+
+.dot, .dott, .dottt {
+    transform: translateY(210px); 
+  width: 120px;
+  height: 20px;                  
+background-color:rgb(251, 248, 95);
+border: #ffd500 3px solid;
+border-radius: 5%;
+}
+

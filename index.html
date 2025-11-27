@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SERAPH II</title>
+    <!-- -->
+    <link rel="stylesheet" href="./src/css/styles.css" />
+    <!-- css -->
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
+    />
+    <!-- bootstrap-icons -->
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SERAPH II</title>
-  <!-- -->
-  <link rel="stylesheet" href="./src/css/styles.css" />
-  <!-- css -->
-  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
-  <!-- bootstrap -->
-  <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css" />
-  <!-- bootstrap-icons -->
-
-  <script type="importmap">
-      {         
+    <script type="importmap">
+      {
         "imports": {
-           
           "animejs": "./node_modules/animejs/dist/bundles/anime.esm.min.js",
           "chart.js/auto": "./node_modules/chart.js/auto/auto.js",
           "maplibre-gl": "https://esm.sh/maplibre-gl@5.13.0",
@@ -24,93 +28,108 @@
         }
       }
     </script>
-  <script type="module" src="./src/js/maplibre.js"></script>
-  <!-- maplibre.js -->
-  <script type="module" src="./src/js/animejs.js"></script>
-  <!-- animejs -->
-  <script type="module" src="./src/js/chartjs.js"></script>
-  <!-- chartjs -->
-  <script src="./src/js/bootstrap.js" defer></script>
-  <!-- bootstrap -->
-</head>
+    <script type="module" src="./src/js/maplibre.js"></script>
+    <!-- maplibre.js -->
+    <script type="module" src="./src/js/animejs.js"></script>
+    <!-- animejs -->
+    <script type="module" src="./src/js/chartjs.js"></script>
+    <!-- chartjs -->
+    <script src="./src/js/bootstrap.js" defer></script>
+    <!-- bootstrap -->
+  </head>
 
-<body>
-  <div class="grille">
-    <div class="annee">
-      <div class="TF1 placeholder">Placeholder : Animation / Text flow</div>
-      <div class="TF2 placeholder">Placeholder : Animation / Text flow</div>
-    </div>
-
-    <div class="troisCarres container ">
-      <div class="row gx-2 ">
-        <div class="GA col-6 mb-2">
-            <h2 class="anneau-title ps-4 mt-5 ">Celestial Skills</h2>
-          <canvas id="anneau"></canvas>
-        </div>
-        <div class="PL placeholder col-6 mb-2">Placeholder : Graphique Progessive Line</div>
-        <div class="AC  mt-2">
-   
-        </div>
+  <body>
+    <div class="grille">
+      <div class="annee">
+        <div class="TF1 placeholder">Placeholder : Animation / Text flow</div>
+        <div class="TF2 placeholder">Placeholder : Animation / Text flow</div>
       </div>
-    </div>
 
-    <div class="S container ">
-      <div class="row mx-5  ">
-       
-        <div class="S1  col-4">Placeholder : Slider 1</div>
-        <div class="S2  col-4">Placeholder : Slider 2</div>
-        <div class="S3  col-4">Placeholder : Slider 3</div>
-      </div>
-    </div>
-
-    <div class="imageT container">
-      <div class="row g-2 bg-success d-flex justify-content-center">
-        <div class="col-10">
-          <img src="./assets/img/image_tyler.png" class="img-fluid" alt="Image Tyler">
+      <div class="troisCarres container">
+        <div class="row gx-2">
+          <div class="GA col-6 mb-2">
+            <h2 class="anneau-title ps-4 mt-5">Celestial Skills</h2>
+            <canvas id="anneau"></canvas>
+          </div>
+          <div class="PL  col-6 mb-2">
+            Placeholder : Graphique Progessive Line
+              <canvas id="multiAxisChart" width="400" height="300"></canvas>
+          </div>
+          <div class="AC mt-2">animation carte</div>
         </div>
       </div>
-    </div>
 
-    <div class="Titre container-fluid">
-      <div class="row gx-2 bg-success">
-        <div class="T placeholder col">Placeholder : Titre</div>
+      <div class="S container">
+        <div class="row mx-5">
+          <div class="S1 col-4">
+            <div class="dot"></div>
+          </div>
+          <div class="S2 col-4">
+            <div class="dott"></div>
+          </div>
+          <div class="S3 col-4">
+            <div class="dottt"></div>
+          </div>
+        </div>
       </div>
 
-    </div>
+      <div class="imageT container">
+        <div class="row g-2 bg-success d-flex justify-content-center">
+          <div class="col-10">
+            <img
+              src="./assets/img/image_tyler.png"
+              class="img-fluid"
+              alt="Image Tyler"
+            />
+          </div>
+        </div>
+      </div>
 
-    <div class="imageN container">
-      <div class="row gx-2 bg-danger d-flex justify-content-center">
-        <div class="col-10">
-          <img src="./assets/img/image_nurl.jpg" class="img-fluid" alt="Image Nurlika">
+      <div class="Titre container-fluid">
+        <div class="row gx-2 bg-success">
+          <div class="T col">SERAPH II</div>
+        </div>
+      </div>
+
+      <div class="imageN container">
+        <div class="row gx-2 bg-danger d-flex justify-content-center">
+          <div class="col-10">
+            <img
+              src="./assets/img/image_nurl.jpg"
+              class="img-fluid"
+              alt="Image Nurlika"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="quatreCarres container">
+        <div class="row bg-warning d-flex justify-content-center">
+          <div class="ES placeholder col-4 me-4 mb-4">
+            Placeholder : Effet sonar loader
+          </div>
+          <div class="R placeholder col-4 ms-4 mb-4">
+            Placeholder : Revert js
+          </div>
+          <div class="B placeholder col-4 me-4">Placeholder : Bouton</div>
+          <div class="ZD placeholder col-4 ms-4">Placeholder : Zdog?</div>
+        </div>
+      </div>
+
+      <div class="deuxRectangles container">
+        <div class="row d-grid gx-2 bg-primary">
+          <div class="SVG placeholder col mb-2">Placeholder : SVG</div>
+          <div class="TC placeholder col mt-2">Placeholder : Text content</div>
+        </div>
+      </div>
+
+      <div class="graphiqueR container">
+        <div class="row gx-2 d-flex justify-content-center align-items-center">
+          <div class="GR">
+            <canvas id="radar"></canvas>
+          </div>
         </div>
       </div>
     </div>
-
-    <div class="quatreCarres container">
-      <div class="row bg-warning d-flex justify-content-center">
-        <div class="ES placeholder col-4 me-4 mb-4">Placeholder : Effet sonar loader</div>
-        <div class="R placeholder col-4 ms-4 mb-4">Placeholder : Revert js</div>
-        <div class="B placeholder col-4 me-4">Placeholder : Bouton</div>
-        <div class="ZD placeholder col-4 ms-4">Placeholder : Zdog?</div>
-      </div>
-    </div>
-
-    <div class="deuxRectangles container">
-      <div class="row d-grid gx-2 bg-primary ">
-        <div class="SVG placeholder col mb-2">Placeholder : SVG</div>
-        <div class="TC placeholder col mt-2">Placeholder : Text content</div>
-      </div>
-    </div>
-
-    <div class="graphiqueR container">
-      <div class="row gx-2  d-flex justify-content-center align-items-center">
-        <div class="GR">
-          <canvas id="radar"></canvas>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</body>
-
+  </body>
 </html>
