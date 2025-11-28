@@ -1,3 +1,8 @@
+:root {
+  --bs-dark: rgb(0, 0, 0); 
+}
+
+
 .grille {
     display: grid;
     height: 100vh;

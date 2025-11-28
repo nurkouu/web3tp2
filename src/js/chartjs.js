@@ -117,7 +117,6 @@ let graph = new Chart(document.querySelector("#anneau"), {
 
       title: {
         display: true,
-    
         padding: { top: 8, bottom: 12 },
         color: "white",
         font: {     
@@ -137,31 +136,29 @@ let graph = new Chart(document.querySelector("#anneau"), {
   }
 });
 
-
-
 const ctx = document.getElementById('multiAxisChart').getContext('2d');
 
 const multiAxisChart = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: ['T0', 'T1', 'T2', 'T3', 'T4', 'T5', 'T6'], 
+        labels: ['T0', 'T1', 'T2', 'T3', 'T4', 'T5', 'T6'],
         datasets: [
             {
-                label: 'Heart Rate (bpm)',
-                data: [80, 95, 110, 105, 120, 115, 100],
-                borderColor: 'rgb(255, 99, 132)',
-                backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                yAxisID: 'y',
-                tension: 0.4 
+                label: 'Seraphim I - Heart Rate (bpm)',
+                data: [80, 92, 105, 98, 120, 110, 95],
+                borderColor: "rgba(251, 248, 95, 1)",
+                backgroundColor: "rgba(251, 248, 95, 0.25)",
+                tension: 0,     
+                borderWidth: 3,
             },
             {
-                label: 'Wing Energy (%)',
-                data: [100, 90, 75, 80, 65, 70, 85],
-                borderColor: 'rgb(54, 162, 235)',
-                backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                yAxisID: 'y1',
-                tension: 0.4
-            }
+                label: 'Seraphim II - Heart Rate (bpm)',
+                data: [70, 85, 95, 110, 108, 100, 90],
+                borderColor: "rgba(83, 255, 138 , 1)",
+                backgroundColor: "rgba(83, 255, 138 , 0.25)",
+                tension: 0,       
+                borderWidth: 3,
+            },
         ]
     },
     options: {
@@ -170,45 +167,54 @@ const multiAxisChart = new Chart(ctx, {
             mode: 'index',
             intersect: false,
         },
-        stacked: false,
+
+        animation: {
+            duration: 1800,
+            easing: 'easeInOutQuart',
+        },
+
+        transitions: {
+            active: {
+                animation: {
+                    duration: 600,
+                    easing: 'easeInOutSine',
+                }
+            }
+        },
+
         plugins: {
             title: {
                 display: true,
-                text: 'Seraphim Vitals Over Time'
+                text: 'Heart Rates of Seraphim Over Time',
+                color: "rgba(243, 243, 232, 1)",
+                font: {
+                    size: 15,
+                    weight: 'bold'
+                }
             }
         },
+
         scales: {
             y: {
-                type: 'linear',
-                display: true,
-                position: 'left',
                 title: {
                     display: true,
-                    text: 'Heart Rate (bpm)'
+                    text: 'Heart Rate (bpm)',
+                    color: 'white',
                 },
                 min: 50,
-                max: 150
+                max: 150,
+                ticks: { color: 'white' }
             },
-            y1: {
-                type: 'linear',
-                display: true,
-                position: 'right',
-                grid: {
-                    drawOnChartArea: false,
-                },
-                title: {
-                    display: true,
-                    text: 'Wing Energy (%)'
-                },
-                min: 0,
-                max: 100
-            },
+
             x: {
                 title: {
                     display: true,
-                    text: 'Time'
-                }
+                    text: 'Time',
+                    color: 'white',
+                },
+                ticks: { color: 'white' }
             }
         }
     }
 });
+
