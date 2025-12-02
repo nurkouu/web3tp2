@@ -1,5 +1,7 @@
 import { animate, utils, createAnimatable, createTimeline, stagger, splitText } from 'animejs';
 
+// animation des sliders
+
 animate(".dot", {
   height: [10, 410, 10],
   duration: 1300,
@@ -41,49 +43,43 @@ createTimeline()
     ease: 'inOut(2)',
   }, stagger(50, { from: 'top' }));
 
-/*
-//animation de l'étoile revert
-animate('g', {
-  rotate: "360deg",
-  duration: 1000,
-  loop: true,
-  easing: 'linear',
-  alternate: true,
-  scale: 3
-});
-*/
 
 
+// Étoile + Bouton
+const starWrapper = document.querySelector(".star-wrapper");
+const deactivateBtn = document.querySelector("button");
+const rect = starWrapper.getBoundingClientRect();
 
-const star = document.querySelector('.star g');
+let centerX = rect.left + rect.width / 2;
+let centerY = rect.top + rect.height / 2;
 
-
-const starAnim = createAnimatable(star, {
-  x: 0,
-  y: 0,
-  easing: 'out(4)',
+const starAnim = createAnimatable(starWrapper, {
+  x: 400,
+  y: 400,
+  ease: "out(4)"
 });
 
-
-const onMouseMove = e => {
-  const mouseX = e.clientX;
-  const mouseY = e.clientY;
-
-
-  starAnim.x(mouseX);
-  starAnim.y(mouseY);
+const onMouseMove = (e) => {
+  const dx = e.clientX - centerX;
+  const dy = e.clientY - centerY;
+  starAnim.x(dx); 
+  starAnim.y(dy);
 };
 
 
-const revertButton = document.querySelector('.future-btn');
-const revertAnim = () => {
-  window.removeEventListener('mousemove', onMouseMove);
+window.addEventListener("resize", () => {
+  centerX = window.innerWidth / 2;
+  centerY = window.innerHeight / 2;
   starAnim.revert();
-};
+});
 
+document.querySelector(".star-wrapper").addEventListener("click", () => {
+  window.addEventListener("mousemove", onMouseMove);
+});
 
-window.addEventListener('mousemove', onMouseMove);
-revertButton.addEventListener('click', revertAnim);
-
-
+deactivateBtn.addEventListener("click", () => {
+  window.removeEventListener("mousemove", onMouseMove);
+  starAnim.x(0);
+  starAnim.y(0);
+});
 

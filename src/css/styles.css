@@ -2,6 +2,7 @@
   --bs-dark: rgb(0, 0, 0); 
 }
 
+* { box-sizing: border-box; }
 
 .grille {
     display: grid;
@@ -137,6 +138,12 @@
         inset 0 0 10px rgba(83, 255, 138, 0.4);
 }
 
+/* L'étoile revert */
+g {
+    transform-origin: 50% 50%;
+}
+
+
 .star {
     width: 150px;
     height: 150px;
@@ -148,6 +155,8 @@
     box-shadow: 0 0 12px rgb(83, 255, 138),
         0 0 24px rgba(83, 255, 138, 0.6),
         inset 0 0 10px rgba(83, 255, 138, 0.4);
+    
+    z-index: 1;
 }
 
 
@@ -174,7 +183,8 @@
         inset 0 0 8px rgba(83, 255, 138, 0.4);
 
     transition: 0.25s ease-out;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px); 
+    z-index: 2;
 }
 
 .future-btn:hover {
@@ -189,10 +199,6 @@
     box-shadow: 0 0 10px rgba(83, 255, 138, 0.5);
 }
 
-/* L'étoile revert */
-g {
-    transform-origin: 50% 50%;
-}
 
 .zdog-canvas {
     width: 150px;
