@@ -1,8 +1,10 @@
 :root {
-  --bs-dark: rgb(0, 0, 0); 
+    --bs-dark: rgb(0, 0, 0);
 }
 
-* { box-sizing: border-box; }
+* {
+    box-sizing: border-box;
+}
 
 .grille {
     display: grid;
@@ -33,9 +35,13 @@
 
 }
 
-/*.troisCarres .AC {
-    grid-column: 1 / -1;
-}*/
+.GA,
+.PL,
+.AC {
+    border: 3px solid #777;
+}
+
+
 
 
 
@@ -49,7 +55,6 @@
 
 .imageT {
     grid-area: c;
-    background-color: orange;
 
     display: grid;
 }
@@ -65,7 +70,6 @@
 
 .imageN {
     grid-area: e;
-    background-color: teal;
 
     display: grid;
 }
@@ -155,7 +159,7 @@ g {
     box-shadow: 0 0 12px rgb(83, 255, 138),
         0 0 24px rgba(83, 255, 138, 0.6),
         inset 0 0 10px rgba(83, 255, 138, 0.4);
-    
+
     z-index: 1;
 }
 
@@ -183,7 +187,7 @@ g {
         inset 0 0 8px rgba(83, 255, 138, 0.4);
 
     transition: 0.25s ease-out;
-    backdrop-filter: blur(4px); 
+    backdrop-filter: blur(4px);
     z-index: 2;
 }
 
