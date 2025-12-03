@@ -35,6 +35,11 @@
     font-family: "timing";
 }
 
+.T {
+  font-family: "over"; 
+  font-size: 100px;
+    }
+
 .placeholder {
     background-color: #444;
     border: 3px dashed #777;
@@ -112,13 +117,14 @@
 }
 
 .GA {
-    width: 30vw;
-    height: 20vh;
+    width: 10vw;
+    height:27.78vh;
 }
 
 .anneau-title {
     margin: 0;
     font-size: 24px;
+      transform: translate(20%, -1000%);
 }
 
 .S1,
@@ -229,3 +235,4 @@ g {
         inset 0 0 10px rgba(83, 255, 138, 0.4);
 
 }
+
