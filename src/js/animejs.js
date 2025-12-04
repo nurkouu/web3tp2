@@ -39,7 +39,7 @@ createTimeline()
     y: '-100%',
     loop: true,
     loopDelay: 300,
-    duration: 500,
+    duration: 350,
     ease: 'inOut(2)',
   }, stagger(50, { from: 'top' }));
 

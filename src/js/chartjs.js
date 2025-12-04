@@ -39,14 +39,20 @@ let graphique = new Chart(document.querySelector("#radar"), {
         display: true,
         text: "Emotional Profile",
          color: "white",
-           font: {            
-          size: 15,        
-          weight: 'bold'    
+           font: {  
+            family: "over",          
+          size: 13        
+             
         }
       },
       legend: {
         labels: {
-          color: "rgba(243, 243, 232, 0.7)"
+          color: "rgba(243, 243, 232, 0.7)",
+           font: {  
+            family: "timing",          
+          size: 14        
+             
+        }
         }
       }
     },
@@ -65,7 +71,12 @@ let graphique = new Chart(document.querySelector("#radar"), {
           color: "white"
         },
         pointLabels: {
-          color: "rgba(243, 243, 232, 0.7)"
+          color: "rgba(243, 243, 232, 0.7)",
+             font: {  
+            family: "timing",          
+          size: 13        
+             
+        }
         }
       }
     }
@@ -114,22 +125,17 @@ let graph = new Chart(document.querySelector("#anneau"), {
     circumference: 180,
     rotation: -90,
     plugins: {
-
-      title: {
-        display: true,
-        padding: { top: 8, bottom: 12 },
-        color: "white",
-        font: {     
-          size: 15,        
-          weight: 'bold'   
-        }
-      },
       
       legend: {
          position: "right",  
-        align: "start", 
+        align: "center", 
         labels: {
-          color: "rgba(243, 243, 232, 0.7)"
+          color: "rgba(243, 243, 232, 0.7)",
+          font: {  
+            family: "timing",          
+          size: 13        
+             
+        }
         }
       }
     }
@@ -145,6 +151,7 @@ const multiAxisChart = new Chart(ctx, {
         datasets: [
             {
                 label: 'Seraphim I - Heart Rate (bpm)',
+                
                 data: [80, 92, 105, 98, 120, 110, 95],
                 borderColor: "rgba(251, 248, 95, 1)",
                 backgroundColor: "rgba(251, 248, 95, 0.25)",
@@ -189,14 +196,26 @@ const multiAxisChart = new Chart(ctx, {
         },
 
         plugins: {
+          
+      legend: {
+        labels: {
+          color: "rgba(243, 243, 232, 0.7)",
+           font: {  
+            family: "timing",          
+          size: 14        
+             
+        }
+        }
+      },
             title: {
                 display: true,
-                text: 'Heart Rates of Seraphim Over Time',
+                text: 'Divine Pulse rate',
                 color: "rgba(243, 243, 232, 1)",
-                font: {
-                    size: 15,
-                    weight: 'bold'
-                }
+                font: {  
+            family: "over",          
+          size: 13        
+             
+        }
             }
         },
 
@@ -206,6 +225,11 @@ const multiAxisChart = new Chart(ctx, {
                     display: true,
                     text: 'Heart Rate (bpm)',
                     color: 'white',
+                     font: {  
+            family: "timing",          
+          size: 15        
+             
+        },
                 },
                 min: 50,
                 max: 150,
@@ -217,6 +241,11 @@ const multiAxisChart = new Chart(ctx, {
                     display: true,
                     text: 'Time',
                     color: 'white',
+                     font: {  
+            family: "timing",          
+          size: 15        
+             
+        },
                 },
                 ticks: { color: 'white' }
             }

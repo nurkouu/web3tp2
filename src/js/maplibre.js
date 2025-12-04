@@ -18,6 +18,7 @@ const carte = new maplibregl.Map({
 
 const mapElement = document.getElementById("carte");
 
+
 mapElement.addEventListener("click", () => {
   destinationIndex = (destinationIndex + 1) % destinations.length;
   carte.flyTo({
@@ -26,3 +27,5 @@ mapElement.addEventListener("click", () => {
     duration: 3000
   });
 });
+
+new maplibregl.Marker().setLngLat(leCaire).addTo(carte);

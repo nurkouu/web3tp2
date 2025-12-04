@@ -63,6 +63,7 @@
 }
 
 
+
 .S {
     grid-area: b;
 
@@ -123,9 +124,13 @@
 }
 
 .anneau-title {
-    margin: 0;
-    font-size: 24px;
-    transform: translate(20%, -900%);
+ color: white;
+    font-size: 13px;
+    position:absolute;
+    top: 20px;
+    left:170px;
+    font-family: "over";
+    font-weight: 600;
 }
 
 .S1,
@@ -184,7 +189,8 @@ g {
 
 .click-me-text {
     margin-top: 8px;
-    font-size: 1.1rem;
+    font-size: 10px;
+    font-family: "over";
     color: rgb(83, 255, 138);
     text-shadow: 0 0 6px rgba(83, 255, 138, 0.7);
     font-weight: 600;
@@ -221,8 +227,8 @@ g {
     top: 23%;
 
     padding: 12px 32px;
-    font-family: "timing";
-    font-size: 1.1rem;
+    font-family: "over";
+    font-size: 10px;
     font-weight: 600;
     letter-spacing: 1px;
 
