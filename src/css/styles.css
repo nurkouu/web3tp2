@@ -36,9 +36,10 @@
 }
 
 .T {
-  font-family: "over"; 
-  font-size: 100px;
-    }
+    font-family: "over";
+    font-size: 10px;
+}
+
 
 .placeholder {
     background-color: #444;
@@ -118,13 +119,13 @@
 
 .GA {
     width: 10vw;
-    height:27.78vh;
+    height: 27.78vh;
 }
 
 .anneau-title {
     margin: 0;
     font-size: 24px;
-      transform: translate(20%, -1000%);
+    transform: translate(20%, -1000%);
 }
 
 .S1,
@@ -181,6 +182,36 @@ g {
     z-index: 1;
 }
 
+.click-me-text {
+    margin-top: 8px;
+    font-size: 1.1rem;
+    color: rgb(83, 255, 138);
+    text-shadow: 0 0 6px rgba(83, 255, 138, 0.7);
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    animation: pulseText 1.8s infinite ease-in-out;
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes pulseText {
+    0% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.08);
+    }
+
+    100% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+}
+
 
 .future-btn {
     width: 150px;
@@ -190,9 +221,14 @@ g {
     top: 23%;
 
     padding: 12px 32px;
+    font-family: "timing";
     font-size: 1.1rem;
     font-weight: 600;
     letter-spacing: 1px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     color: rgb(83, 255, 138);
     background: rgba(39, 82, 56, 0.25);
@@ -235,4 +271,3 @@ g {
         inset 0 0 10px rgba(83, 255, 138, 0.4);
 
 }
-
