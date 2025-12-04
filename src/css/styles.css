@@ -60,10 +60,15 @@
 
 .GA,
 .PL,
-.AC {
+.AC, 
+.TC,
+.SVG {
     border: 3px solid #777;
 }
 
+.TC {
+    color: rgb(83, 255, 138);
+}
 
 
 .S {
@@ -99,14 +104,13 @@
 .quatreCarres {
     grid-area: f;
 
-
     display: grid;
     padding: 15px;
+    border: 3px solid #777;
 }
 
 .deuxRectangles {
     grid-area: g;
-    background-color: magenta;
     display: grid;
 }
 
@@ -131,7 +135,7 @@
     font-size: 13px;
     position:absolute;
     top: 20px;
-    left:170px;
+    left: 170px;
     font-family: "over";
     font-weight: 600;
 }

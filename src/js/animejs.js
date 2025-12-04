@@ -1,4 +1,4 @@
-import { animate, utils, createAnimatable, createTimeline, stagger, splitText } from 'animejs';
+import { animate, utils, createAnimatable, createTimeline, stagger, splitText, svg } from 'animejs';
 
 // animation des sliders
 
@@ -82,4 +82,37 @@ deactivateBtn.addEventListener("click", () => {
   starAnim.x(0);
   starAnim.y(0);
 });
+
+// svg line motion
+
+const drawable1 = svg.createDrawable(".signe1");
+
+animate(drawable1, {
+  draw: ["0 0", "0 1", "1 1"],
+  loop: true,
+  alternate: true,
+  duration: 200,
+  loopDelay: 500
+});
+
+const drawable2 = svg.createDrawable(".signe2");
+
+animate(drawable2, {
+  draw: ["0 1"],
+  loop: true,
+  alternate: true,
+  duration: 1000,
+  loopDelay: 500
+});
+
+const drawable3 = svg.createDrawable(".signe3");
+
+animate(drawable3, {
+  draw: ["0 0", "0 1", "1 1"],
+  loop: true,
+  alternate: true,
+  duration: 400,
+  loopDelay: 500
+});
+
 
