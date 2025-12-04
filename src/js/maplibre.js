@@ -12,10 +12,13 @@ const carte = new maplibregl.Map({
   style: "https://api.maptiler.com/maps/satellite/style.json?key=WJ8oUVj7jA3CUcp0bLPr",
   center: destinations[destinationIndex],
   zoom: 15,
-    attributionControl: false,
+  attributionControl: false,
 });
 
-document.body.addEventListener("click", () => {
+
+const mapElement = document.getElementById("carte");
+
+mapElement.addEventListener("click", () => {
   destinationIndex = (destinationIndex + 1) % destinations.length;
   carte.flyTo({
     center: destinations[destinationIndex],

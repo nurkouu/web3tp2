@@ -150,6 +150,9 @@ const multiAxisChart = new Chart(ctx, {
                 backgroundColor: "rgba(251, 248, 95, 0.25)",
                 tension: 0,     
                 borderWidth: 3,
+                pointRadius: 0,
+                pointHoverRadius: 0,
+
             },
             {
                 label: 'Seraphim II - Heart Rate (bpm)',
@@ -158,6 +161,9 @@ const multiAxisChart = new Chart(ctx, {
                 backgroundColor: "rgba(83, 255, 138 , 0.25)",
                 tension: 0,       
                 borderWidth: 3,
+                pointRadius: 0,
+                pointHoverRadius: 0,
+
             },
         ]
     },
@@ -217,4 +223,8 @@ const multiAxisChart = new Chart(ctx, {
         }
     }
 });
+
+
+
+
 
