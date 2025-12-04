@@ -37,7 +37,9 @@
 
 .T {
     font-family: "over";
-    font-size: 10px;
+    font-size: 90px;
+   
+    transform: translate(30%,20%);
 }
 
 
@@ -69,20 +71,21 @@
 
     border: 3px solid #777;
     display: grid;
-    padding: 15px;
+    padding: 2px;
+    transform: translate(1.2%);
 }
 
 .imageT {
     grid-area: c;
     border: 3px solid #777;
     display: grid;
+    transform: translate(1.09%);
 }
 
 
 .Titre {
     grid-area: d;
-    background-color: midnightblue;
-
+      border: 3px solid #777;
     display: grid;
     padding: 20px;
 }
@@ -140,7 +143,10 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    transform: translate(0%, 30%);
+
 }
+
 
 .dot,
 .dott,

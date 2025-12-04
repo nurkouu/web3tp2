@@ -233,7 +233,12 @@ const multiAxisChart = new Chart(ctx, {
                 },
                 min: 50,
                 max: 150,
-                ticks: { color: 'white' }
+                ticks: { color: 'white',
+                  font: {
+        family: "timing",
+        size: 14
+    }
+                 }
             },
 
             x: {
@@ -247,7 +252,12 @@ const multiAxisChart = new Chart(ctx, {
              
         },
                 },
-                ticks: { color: 'white' }
+                ticks: { color: 'white',
+                  font: {
+        family: "timing",
+        size: 14
+    }
+                 }
             }
         }
     }
