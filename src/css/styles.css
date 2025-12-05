@@ -38,8 +38,8 @@
 .T {
     font-family: "over";
     font-size: 90px;
-   
-    transform: translate(30%,20%);
+
+    transform: translate(30%, 20%);
 }
 
 
@@ -60,7 +60,7 @@
 
 .GA,
 .PL,
-.AC, 
+.AC,
 .TC,
 .SVG {
     border: 3px solid #777;
@@ -90,7 +90,7 @@
 
 .Titre {
     grid-area: d;
-      border: 3px solid #777;
+    border: 3px solid #777;
     display: grid;
     padding: 20px;
 }
@@ -131,9 +131,9 @@
 }
 
 .anneau-title {
- color: white;
+    color: white;
     font-size: 13px;
-    position:absolute;
+    position: absolute;
     top: 20px;
     left: 170px;
     font-family: "over";

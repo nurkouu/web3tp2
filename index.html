@@ -77,21 +77,21 @@
     <div class="imageT container">
       <div class="row g-2 d-flex justify-content-center">
         <div class="col-10">
-          <img src="./assets/img/image_tyler.png" class="img-fluid" alt="Image Tyler" />
+          <img src="./assets/img/image_tyler.png" id="tylerImg" class="img-fluid" alt="Image Tyler" />
         </div>
       </div>
     </div>
 
     <div class="Titre container-fluid">
-      <div class="row gx-2 ">
-        <div class="T col">SERAPH II</div>
+      <div class="row gx-2">
+        <div id="seraphII" class="T col">SERAPH II</div>
       </div>
     </div>
 
     <div class="imageN container">
       <div class="row gx-2 d-flex justify-content-center">
         <div class="col-10">
-          <img src="./assets/img/image_nurl.jpg" class="img-fluid" alt="Image Nurlika" />
+          <img src="./assets/img/image_nurl.jpg" id="nurlikaImg" class="img-fluid" alt="Image Nurlika" />
         </div>
       </div>
     </div>
@@ -152,28 +152,44 @@
       <div class="row d-grid gx-2 ">
         <div class="SVG col mb-2 d-flex justify-content-evenly">
           <!-- warning sign 1-->
-          <svg xmlns="http://www.w3.org/2000/svg"style="overflow: visible" width="140" height="140"  stroke="rgba(125, 121, 32, 0.5)" stroke="currentColor" stroke-width="0.2" class="bi bi-exclamation-triangle" viewBox="0 0 16 16">
-            <path class="signe1" d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.15.15 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.2.2 0 0 1-.054.06.1.1 0 0 1-.066.017H1.146a.1.1 0 0 1-.066-.017.2.2 0 0 1-.054-.06.18.18 0 0 1 .002-.183L7.884 2.073a.15.15 0 0 1 .054-.057m1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767z"/>
-            <path d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"/>
+          <svg xmlns="http://www.w3.org/2000/svg" style="overflow: visible" width="140" height="140"
+            stroke="rgba(125, 121, 32, 0.5)" stroke="currentColor" stroke-width="0.2" class="bi bi-exclamation-triangle"
+            viewBox="0 0 16 16">
+            <path class="signe1"
+              d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.15.15 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.2.2 0 0 1-.054.06.1.1 0 0 1-.066.017H1.146a.1.1 0 0 1-.066-.017.2.2 0 0 1-.054-.06.18.18 0 0 1 .002-.183L7.884 2.073a.15.15 0 0 1 .054-.057m1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767z" />
+            <path
+              d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z" />
           </svg>
 
           <!-- warning sign 2-->
-          <svg xmlns="http://www.w3.org/2000/svg"style="overflow: visible" width="140" height="140" stroke="rgb(251, 248, 95)"  stroke="currentColor" stroke-width="0.2" class="bi bi-exclamation-triangle" viewBox="0 0 16 16">
-            <path class="signe2" d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.15.15 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.2.2 0 0 1-.054.06.1.1 0 0 1-.066.017H1.146a.1.1 0 0 1-.066-.017.2.2 0 0 1-.054-.06.18.18 0 0 1 .002-.183L7.884 2.073a.15.15 0 0 1 .054-.057m1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767z"/>
-            <path d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"/>
+          <svg xmlns="http://www.w3.org/2000/svg" style="overflow: visible" width="140" height="140"
+            stroke="rgb(251, 248, 95)" stroke="currentColor" stroke-width="0.2" class="bi bi-exclamation-triangle"
+            viewBox="0 0 16 16">
+            <path class="signe2"
+              d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.15.15 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.2.2 0 0 1-.054.06.1.1 0 0 1-.066.017H1.146a.1.1 0 0 1-.066-.017.2.2 0 0 1-.054-.06.18.18 0 0 1 .002-.183L7.884 2.073a.15.15 0 0 1 .054-.057m1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767z" />
+            <path
+              d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z" />
           </svg>
 
           <!-- warning sign 3-->
-          <svg xmlns="http://www.w3.org/2000/svg"style="overflow: visible" width="140" height="140" stroke="rgba(125, 121, 32, 0.5)" stroke="currentColor" stroke-width="0.2" class="bi bi-exclamation-triangle" viewBox="0 0 16 16">
-            <path class="signe3" d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.15.15 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.2.2 0 0 1-.054.06.1.1 0 0 1-.066.017H1.146a.1.1 0 0 1-.066-.017.2.2 0 0 1-.054-.06.18.18 0 0 1 .002-.183L7.884 2.073a.15.15 0 0 1 .054-.057m1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767z"/>
-            <path d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"/>
+          <svg xmlns="http://www.w3.org/2000/svg" style="overflow: visible" width="140" height="140"
+            stroke="rgba(125, 121, 32, 0.5)" stroke="currentColor" stroke-width="0.2" class="bi bi-exclamation-triangle"
+            viewBox="0 0 16 16">
+            <path class="signe3"
+              d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.15.15 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.2.2 0 0 1-.054.06.1.1 0 0 1-.066.017H1.146a.1.1 0 0 1-.066-.017.2.2 0 0 1-.054-.06.18.18 0 0 1 .002-.183L7.884 2.073a.15.15 0 0 1 .054-.057m1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767z" />
+            <path
+              d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z" />
           </svg>
         </div>
 
         <div class="TC col">
           <div class="row section-text text-center">
-            <p class="fs-5 mt-4">A boy and a girl, clad in shimmering futuristic armor, stand as the galaxy’s vigilant
-              guardians. His energy sword crackles with raw power, while her dual plasma pistols hum with precision.
+            <p class="fs-5 mt-3">Vyron and Solara, clad in shimmering futuristic armor, stand as the galaxy’s
+              vigilant
+              guardians. His two-edged energy sword crackles with sharp and raw power, while her plasma sledge hammer
+              hums with
+              stricking
+              precision.
               Together, they soar through starfields and neon-lit battlefronts, their synchronized movements a
               testament to trust and training. Wherever chaos rises, their combined courage and skill shine as a
               beacon, defending planets and civilizations from any threat that dares disturb the cosmic balance.</p>
