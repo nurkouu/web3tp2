@@ -39,9 +39,21 @@
     font-family: "over";
     font-size: 90px;
 
-    transform: translate(30%, 20%);
+    transform: translate(30%, -8%);
 }
 
+#clickSlider {
+    position: absolute;
+    top: 9%;
+    left: 28%;
+    font-size: 28px;
+    animation: pulseText 1.8s infinite ease-in-out;
+    font-family: "over";
+    color:  rgb(251, 248, 95);
+    text-shadow: 0 0 6px rgba(83, 255, 138, 0.7);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
 
 .placeholder {
     background-color: #444;

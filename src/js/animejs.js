@@ -1,29 +1,45 @@
 import { animate, utils, createAnimatable, createTimeline, stagger, splitText, svg } from 'animejs';
 
 // animation des sliders
+let slidersActive = false;
 
-animate(".dot", {
-  height: [10, 410, 10],
-  duration: 1300,
-  loop: true,
-  ease: 'easeInOutSine',
-  delay: () => utils.random(2, 2000)
+function startAnimations() {
+  animate(".dot", {
+    height: [10, 350, 10],
+    duration: 1300,
+    loop: true,
+    easing: "easeInOutSine",
+    delay: () => utils.random(2, 2000)
+  });
+
+  animate(".dott", {
+    height: [10, 350, 10],
+    duration: 1000,
+    loop: true,
+    easing: "easeOutInCirc",
+    delay: 400
+  });
+
+  animate(".dottt", {
+    height: [10, 350, 10],
+    duration: 800,
+    loop: true,
+    easing: "linear"
+  });
+
+  slidersActive = true;
+}
+
+
+const sliderDiv = document.querySelector(".S.container");
+
+sliderDiv.addEventListener("click", (event) => {
+  if (!slidersActive) {
+    startAnimations();
+  }
 });
 
-animate(".dott", {
-  height: [10, 410, 10],
-  duration: 1000,
-  loop: true,
-  ease: 'outInCirc',
-  delay: 400,
-});
 
-animate(".dottt", {
-  height: [10, 410, 10],
-  duration: 800,
-  loop: true,
-  easing: 'linear',
-});
 
 // animation du texte clone
 
