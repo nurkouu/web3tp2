@@ -142,6 +142,16 @@ let graph = new Chart(document.querySelector("#anneau"), {
   }
 });
 
+setInterval(() => {
+  for (let ds of graph.data.datasets) {
+    for (let i = 0; i < ds.data.length; i++) {
+      ds.data[i] = Math.round(Math.random() * 20);
+    }
+  }
+  graph.update();
+}, 800);
+
+
 const ctx = document.getElementById('multiAxisChart').getContext('2d');
 
 const multiAxisChart = new Chart(ctx, {
@@ -151,59 +161,65 @@ const multiAxisChart = new Chart(ctx, {
     datasets: [
       {
         label: 'Seraphim I - Heart Rate (bpm)',
-
         data: [80, 92, 105, 98, 120, 110, 95],
         borderColor: "rgba(251, 248, 95, 1)",
         backgroundColor: "rgba(251, 248, 95, 0.25)",
-        tension: 0,
+        tension: 0.3,
         borderWidth: 3,
         pointRadius: 0,
-        pointHoverRadius: 0,
-
+        pointHoverRadius: 6,
+        pointHoverBorderWidth: 2,
+        fill: true
       },
       {
         label: 'Seraphim II - Heart Rate (bpm)',
         data: [70, 85, 95, 110, 108, 100, 90],
-        borderColor: "rgba(83, 255, 138 , 1)",
-        backgroundColor: "rgba(83, 255, 138 , 0.25)",
-        tension: 0,
+        borderColor: "rgba(83, 255, 138, 1)",
+        backgroundColor: "rgba(83, 255, 138, 0.25)",
+        tension: 0.3,
         borderWidth: 3,
         pointRadius: 0,
-        pointHoverRadius: 0,
-
-      },
+        pointHoverRadius: 6,
+        pointHoverBorderWidth: 2,
+        fill: true
+      }
     ]
   },
+
   options: {
     responsive: true,
+
     interaction: {
       mode: 'index',
       intersect: false,
     },
 
     animation: {
-      duration: 1800,
-      easing: 'easeInOutQuart',
+      duration: 1500,
+      easing: 'easeInOutQuart'
     },
 
-    transitions: {
-      active: {
-        animation: {
-          duration: 600,
-          easing: 'easeInOutSine',
-        }
+    animations: {
+      x: {
+        type: 'number',
+        easing: 'easeInOutQuad',
+        from: NaN,
+        duration: 1500
+      },
+      y: {
+        type: 'number',
+        easing: 'easeInOutQuad',
+        duration: 1500
       }
     },
 
     plugins: {
-
       legend: {
         labels: {
           color: "rgba(243, 243, 232, 0.7)",
           font: {
             family: "timing",
             size: 14
-
           }
         }
       },
@@ -214,7 +230,6 @@ const multiAxisChart = new Chart(ctx, {
         font: {
           family: "over",
           size: 13
-
         }
       }
     },
@@ -228,8 +243,7 @@ const multiAxisChart = new Chart(ctx, {
           font: {
             family: "timing",
             size: 15
-
-          },
+          }
         },
         min: 50,
         max: 150,
@@ -250,8 +264,7 @@ const multiAxisChart = new Chart(ctx, {
           font: {
             family: "timing",
             size: 15
-
-          },
+          }
         },
         ticks: {
           color: 'white',
@@ -264,17 +277,3 @@ const multiAxisChart = new Chart(ctx, {
     }
   }
 });
-
-setInterval(() => {
-  for (let ds of graph.data.datasets) {
-    for (let i = 0; i < ds.data.length; i++) {
-      ds.data[i] = Math.round(Math.random() * 20);
-    }
-  }
-  graph.update();
-}, 800);
-
-
-
-
-
