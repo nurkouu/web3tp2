@@ -9,7 +9,7 @@ let destinationIndex = 0;
 
 const carte = new maplibregl.Map({
   container: "carte",
-  style: "https://api.maptiler.com/maps/satellite/style.json?key=WJ8oUVj7jA3CUcp0bLPr",
+  style: "https://api.maptiler.com/maps/toner-v2/style.json?key=r8qiAmXvQLbYYlnDdsVP",
   center: destinations[destinationIndex],
   zoom: 15,
   attributionControl: false,
@@ -23,9 +23,8 @@ mapElement.addEventListener("click", () => {
   destinationIndex = (destinationIndex + 1) % destinations.length;
   carte.flyTo({
     center: destinations[destinationIndex],
-    zoom: 15,
+    zoom: 10,
     duration: 3000
   });
 });
 
-new maplibregl.Marker().setLngLat(leCaire).addTo(carte);

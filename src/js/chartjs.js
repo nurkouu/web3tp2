@@ -38,21 +38,21 @@ let graphique = new Chart(document.querySelector("#radar"), {
       title: {
         display: true,
         text: "Emotional Profile",
-         color: "white",
-           font: {  
-            family: "over",          
-          size: 13        
-             
+        color: "white",
+        font: {
+          family: "over",
+          size: 13
+
         }
       },
       legend: {
         labels: {
           color: "rgba(243, 243, 232, 0.7)",
-           font: {  
-            family: "timing",          
-          size: 14        
-             
-        }
+          font: {
+            family: "timing",
+            size: 14
+
+          }
         }
       }
     },
@@ -72,11 +72,11 @@ let graphique = new Chart(document.querySelector("#radar"), {
         },
         pointLabels: {
           color: "rgba(243, 243, 232, 0.7)",
-             font: {  
-            family: "timing",          
-          size: 13        
-             
-        }
+          font: {
+            family: "timing",
+            size: 13
+
+          }
         }
       }
     }
@@ -125,17 +125,17 @@ let graph = new Chart(document.querySelector("#anneau"), {
     circumference: 180,
     rotation: -90,
     plugins: {
-      
+
       legend: {
-         position: "right",  
-        align: "center", 
+        position: "right",
+        align: "center",
         labels: {
           color: "rgba(243, 243, 232, 0.7)",
-          font: {  
-            family: "timing",          
-          size: 13        
-             
-        }
+          font: {
+            family: "timing",
+            size: 13
+
+          }
         }
       }
     }
@@ -145,123 +145,134 @@ let graph = new Chart(document.querySelector("#anneau"), {
 const ctx = document.getElementById('multiAxisChart').getContext('2d');
 
 const multiAxisChart = new Chart(ctx, {
-    type: 'line',
-    data: {
-        labels: ['T0', 'T1', 'T2', 'T3', 'T4', 'T5', 'T6'],
-        datasets: [
-            {
-                label: 'Seraphim I - Heart Rate (bpm)',
-                
-                data: [80, 92, 105, 98, 120, 110, 95],
-                borderColor: "rgba(251, 248, 95, 1)",
-                backgroundColor: "rgba(251, 248, 95, 0.25)",
-                tension: 0,     
-                borderWidth: 3,
-                pointRadius: 0,
-                pointHoverRadius: 0,
+  type: 'line',
+  data: {
+    labels: ['T0', 'T1', 'T2', 'T3', 'T4', 'T5', 'T6'],
+    datasets: [
+      {
+        label: 'Seraphim I - Heart Rate (bpm)',
 
-            },
-            {
-                label: 'Seraphim II - Heart Rate (bpm)',
-                data: [70, 85, 95, 110, 108, 100, 90],
-                borderColor: "rgba(83, 255, 138 , 1)",
-                backgroundColor: "rgba(83, 255, 138 , 0.25)",
-                tension: 0,       
-                borderWidth: 3,
-                pointRadius: 0,
-                pointHoverRadius: 0,
+        data: [80, 92, 105, 98, 120, 110, 95],
+        borderColor: "rgba(251, 248, 95, 1)",
+        backgroundColor: "rgba(251, 248, 95, 0.25)",
+        tension: 0,
+        borderWidth: 3,
+        pointRadius: 0,
+        pointHoverRadius: 0,
 
-            },
-        ]
+      },
+      {
+        label: 'Seraphim II - Heart Rate (bpm)',
+        data: [70, 85, 95, 110, 108, 100, 90],
+        borderColor: "rgba(83, 255, 138 , 1)",
+        backgroundColor: "rgba(83, 255, 138 , 0.25)",
+        tension: 0,
+        borderWidth: 3,
+        pointRadius: 0,
+        pointHoverRadius: 0,
+
+      },
+    ]
+  },
+  options: {
+    responsive: true,
+    interaction: {
+      mode: 'index',
+      intersect: false,
     },
-    options: {
-        responsive: true,
-        interaction: {
-            mode: 'index',
-            intersect: false,
-        },
 
+    animation: {
+      duration: 1800,
+      easing: 'easeInOutQuart',
+    },
+
+    transitions: {
+      active: {
         animation: {
-            duration: 1800,
-            easing: 'easeInOutQuart',
-        },
+          duration: 600,
+          easing: 'easeInOutSine',
+        }
+      }
+    },
 
-        transitions: {
-            active: {
-                animation: {
-                    duration: 600,
-                    easing: 'easeInOutSine',
-                }
-            }
-        },
+    plugins: {
 
-        plugins: {
-          
       legend: {
         labels: {
           color: "rgba(243, 243, 232, 0.7)",
-           font: {  
-            family: "timing",          
-          size: 14        
-             
-        }
+          font: {
+            family: "timing",
+            size: 14
+
+          }
         }
       },
-            title: {
-                display: true,
-                text: 'Divine Pulse rate',
-                color: "rgba(243, 243, 232, 1)",
-                font: {  
-            family: "over",          
-          size: 13        
-             
-        }
-            }
-        },
+      title: {
+        display: true,
+        text: 'Divine Pulse rate',
+        color: "rgba(243, 243, 232, 1)",
+        font: {
+          family: "over",
+          size: 13
 
-        scales: {
-            y: {
-                title: {
-                    display: true,
-                    text: 'Heart Rate (bpm)',
-                    color: 'white',
-                     font: {  
-            family: "timing",          
-          size: 15        
-             
-        },
-                },
-                min: 50,
-                max: 150,
-                ticks: { color: 'white',
-                  font: {
-        family: "timing",
-        size: 14
-    }
-                 }
-            },
-
-            x: {
-                title: {
-                    display: true,
-                    text: 'Time',
-                    color: 'white',
-                     font: {  
-            family: "timing",          
-          size: 15        
-             
-        },
-                },
-                ticks: { color: 'white',
-                  font: {
-        family: "timing",
-        size: 14
-    }
-                 }
-            }
         }
+      }
+    },
+
+    scales: {
+      y: {
+        title: {
+          display: true,
+          text: 'Heart Rate (bpm)',
+          color: 'white',
+          font: {
+            family: "timing",
+            size: 15
+
+          },
+        },
+        min: 50,
+        max: 150,
+        ticks: {
+          color: 'white',
+          font: {
+            family: "timing",
+            size: 14
+          }
+        }
+      },
+
+      x: {
+        title: {
+          display: true,
+          text: 'Time',
+          color: 'white',
+          font: {
+            family: "timing",
+            size: 15
+
+          },
+        },
+        ticks: {
+          color: 'white',
+          font: {
+            family: "timing",
+            size: 14
+          }
+        }
+      }
     }
+  }
 });
+
+setInterval(() => {
+  for (let ds of graph.data.datasets) {
+    for (let i = 0; i < ds.data.length; i++) {
+      ds.data[i] = Math.round(Math.random() * 20);
+    }
+  }
+  graph.update();
+}, 800);
 
 
 

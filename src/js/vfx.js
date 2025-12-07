@@ -15,12 +15,3 @@ vfxN.add(img2, {
     shader: "glitch",
     overflow: 100
 });
-
-/* POUR LE TITRE SERAPH II
-const title = document.querySelector('#seraphII');
-
-const vfxTitle = new VFX();
-vfxTitle.add(title, {
-    shader: "glitch"
-});
-*/
